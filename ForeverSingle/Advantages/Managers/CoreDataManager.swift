@@ -36,7 +36,6 @@ class CoreDataManager {
     func addNewAdvantage(desc: String) -> Advantages? {
         if let toDoItem = NSEntityDescription.insertNewObject(forEntityName: "Advantages", into: backgroundContext) as? Advantages  {
             toDoItem.desc = desc
-//            print(persistentContainer.persistentStoreCoordinator.persistentStores[0])
             try! backgroundContext.save()
             return toDoItem
         }
@@ -57,7 +56,7 @@ class CoreDataManager {
         let request: NSFetchRequest<Advantages> = Advantages.fetchRequest()
         let results = try? persistentContainer.viewContext.fetch(request)
         for result in results! {
-//            print(result.desc)
+            print(result.desc)
         }
         return results ?? []
     }

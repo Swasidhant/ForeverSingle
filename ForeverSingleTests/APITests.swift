@@ -24,6 +24,8 @@ class APITests: XCTestCase {
         let sepahamore = DispatchSemaphore(value: 0)
         NetworkManager.fetchWeatherData { (dataDict) in
             sepahamore.signal()
+            let weattherList = dataDict["list"]
+            XCTAssertNotNil(weattherList, "not getting weather list")
         }
         
         let timeout = DispatchTime.now() + DispatchTimeInterval.seconds(5)
@@ -45,11 +47,13 @@ class APITests: XCTestCase {
     
     func testWaiter() {
         let expectation = XCTestExpectation.init(description: "DOwnload expectation")
+        let expectation2 = XCTestExpectation.init(description: "DOwnload expectation")
+
         NetworkManager.fetchWeatherData { (dataDict) in
             expectation.fulfill()
         }
         
-        let result = XCTWaiter.wait(for: [expectation], timeout: 5)
+        let result = XCTWaiter.wait(for: [expectation,expectation2], timeout: 5)
         XCTAssertEqual(result, .completed, "some error")
     }
     

@@ -12,7 +12,6 @@
 		B02BDC30202E24D000638F8E /* AdvantageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02BDC2F202E24D000638F8E /* AdvantageTableViewCell.swift */; };
 		B02BDC38202E263F00638F8E /* ForeverSingleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02BDC37202E263F00638F8E /* ForeverSingleUITests.swift */; };
 		B02BDC43202E972800638F8E /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02BDC42202E972800638F8E /* PerformanceTests.swift */; };
-		B02BDC46202E975000638F8E /* PredictionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A98DC202E10C7009363AE /* PredictionCalculator.swift */; };
 		B02BDC48202E993100638F8E /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02BDC47202E993100638F8E /* APITests.swift */; };
 		B02BDC49202EA96800638F8E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A98DE202E1237009363AE /* NetworkManager.swift */; };
 		B0648E27202DF25E001598CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0648E26202DF25E001598CF /* AppDelegate.swift */; };
@@ -29,6 +28,9 @@
 		B09A98E9202E1337009363AE /* Advantages+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A98E7202E1337009363AE /* Advantages+CoreDataClass.swift */; };
 		B09A98EA202E1337009363AE /* Advantages+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A98E8202E1337009363AE /* Advantages+CoreDataProperties.swift */; };
 		B09A98ED202E1888009363AE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A98EC202E1888009363AE /* CoreDataManager.swift */; };
+		F1E26F61202F11E000616AFF /* DemeTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E26F60202F11E000616AFF /* DemeTestClass.swift */; };
+		F1E26F67202F202800616AFF /* PredictionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A98DC202E10C7009363AE /* PredictionCalculator.swift */; };
+		F1E26F6A202F215200616AFF /* ForeverSingle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B09A98E4202E1302009363AE /* ForeverSingle.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,7 @@
 		B09A98E7202E1337009363AE /* Advantages+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Advantages+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B09A98E8202E1337009363AE /* Advantages+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Advantages+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B09A98EC202E1888009363AE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F1E26F60202F11E000616AFF /* DemeTestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemeTestClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,7 @@
 				B02BDC25202E1DED00638F8E /* Info.plist */,
 				B02BDC42202E972800638F8E /* PerformanceTests.swift */,
 				B02BDC47202E993100638F8E /* APITests.swift */,
+				F1E26F60202F11E000616AFF /* DemeTestClass.swift */,
 			);
 			path = ForeverSingleTests;
 			sourceTree = "<group>";
@@ -365,11 +369,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B02BDC46202E975000638F8E /* PredictionCalculator.swift in Sources */,
+				F1E26F67202F202800616AFF /* PredictionCalculator.swift in Sources */,
 				B02BDC43202E972800638F8E /* PerformanceTests.swift in Sources */,
 				B02BDC49202EA96800638F8E /* NetworkManager.swift in Sources */,
 				B02BDC48202E993100638F8E /* APITests.swift in Sources */,
 				B02BDC24202E1DED00638F8E /* ForeverSingleTests.swift in Sources */,
+				F1E26F61202F11E000616AFF /* DemeTestClass.swift in Sources */,
+				F1E26F6A202F215200616AFF /* ForeverSingle.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

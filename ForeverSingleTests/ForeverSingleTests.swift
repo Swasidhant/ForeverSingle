@@ -15,7 +15,7 @@ class ForeverSingleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-         demoManager = CoreDataManager(container: mockPersistantContainer)
+        demoManager = CoreDataManager(container: mockPersistantContainer)
         self.initialSetting()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -25,6 +25,22 @@ class ForeverSingleTests: XCTestCase {
         super.tearDown()
         self.deleteAllData()
     }
+    
+    func testAdd () {
+        let insertedExample = self.demoManager.addNewAdvantage(desc: "demo")
+        XCTAssertNotNil(insertedExample, "insertedentity doesnot exist")
+    }
+    
+    func testFetch () {
+        let insertedExample = self.demoManager.addNewAdvantage(desc: "demo")
+        XCTAssertNotNil(insertedExample, "inserted entity doesnot exist")
+        
+        self.demoManager.save()
+        
+        let arrAllAdvantages = self.demoManager.fetchAll()
+        XCTAssertEqual(arrAllAdvantages.count, 4, "expected count is not present")
+    }
+
     
     
     //MARK:- initialization code

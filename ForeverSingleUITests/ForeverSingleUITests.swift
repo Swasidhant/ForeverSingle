@@ -72,4 +72,19 @@ class ForeverSingleUITests: XCTestCase {
         let result = XCTWaiter.wait(for: [expectation], timeout: 3.0)
     }
     
+    func testDemo () {
+        
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        let element = tablesQuery/*@START_MENU_TOKEN@*/.cells["Advantages"].staticTexts["Advantages"]/*[[".cells[\"Advantages\"].staticTexts[\"Advantages\"]",".staticTexts[\"Advantages\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/
+        
+        XCTAssertNotNil(element, "advantages label doesnot exist")
+        
+//        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Only you eat your own ice-cream"]/*[[".cells.staticTexts[\"Only you eat your own ice-cream\"]",".staticTexts[\"Only you eat your own ice-cream\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        app.navigationBars["Advantages"].buttons["Forever Single"].tap()
+//        tablesQuery.cells["Prediction"].tap()
+//        app.alerts["Prediction"].buttons["Ok"].tap()
+        
+    }
+    
 }
