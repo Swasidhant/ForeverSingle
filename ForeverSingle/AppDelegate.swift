@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, ContainerDeclaringObject {
 
     var window: UIWindow?
 
@@ -41,6 +42,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    //MARK:-core data
+    var persistentContainer: NSPersistentContainer = {
+    let container = NSPersistentContainer(name: "ForeverSingle")
+    container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+    if let error = error as NSError? {
+    fatalError("Unresolved error \(error), \(error.userInfo)")
+    }
+    })
+    return container
+}()
 
 }
 
