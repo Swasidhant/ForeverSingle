@@ -26,29 +26,6 @@ class ForeverSingleTests: XCTestCase {
         self.deleteAllData()
     }
     
-    func testInsert() {
-        let description1 = "The Flash"
-        
-        let advantage = self.demoManager.addNewAdvantageInViewContext(desc: description)
-        XCTAssertNotNil(advantage)
-    }
-    
-    func testAddAndFetchAll() {
-        let description1 = "The Flash"
-        let advantage = self.demoManager.addNewAdvantageInViewContext(desc: description1)
-        self.demoManager.save()
-        
-        let arrAdvantages = self.demoManager.fetchAll()
-        XCTAssertEqual(arrAdvantages.count, 4, "fetched count does not match expected count")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
     
     //MARK:- initialization code
     func initialSetting() {

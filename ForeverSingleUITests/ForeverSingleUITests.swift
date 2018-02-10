@@ -28,47 +28,4 @@ class ForeverSingleUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        
-        let app = XCUIApplication()
-        let tablesQuery = app.tables
-        XCTAssertNotNil(tablesQuery.cells["Advantages"])
-        let element = app.navigationBars.otherElements["Forever Single"]
-        XCTAssertNotNil(element, "Nav bar text not present")
-    }
-    
-    func testAlert() {
-        let app = XCUIApplication()
-        let tablesQuery = app.tables
-        let predictionElement = tablesQuery.cells.staticTexts["Prediction"].tap()
-        let alerts = app.alerts
-        XCTAssertTrue(alerts.element.exists, "alert not coming")
-    }
-    
-    func testAlertWithDelay() {
-        let app = XCUIApplication()
-        let tablesQuery = app.tables
-        let predictionElement = tablesQuery.cells.staticTexts["Weather Condition"].tap()
-        let alerts = app.alerts
-        XCTAssertTrue(alerts.element.exists, "alert not coming")
-    }
-    
-    func testAlertWithDelayHandled() {
-        let app = XCUIApplication()
-        let tablesQuery = app.tables
-        let predictionElement = tablesQuery.cells.staticTexts["Weather Condition"].tap()
-        let alerts = app.alerts
-        let expectation = XCTKVOExpectation.init(keyPath: "exists", object: alerts.element, expectedValue: true)
-        let result = XCTWaiter.wait(for: [expectation], timeout: 3.0)
-        XCTAssertEqual(result, .completed, "alert not coming for weather prediction")
-    }
-    
-    func testAlertWithDelayHandledDemo() {
-        let app = XCUIApplication()
-        let table = app.tables.element
-        let cell = table.cells.element(boundBy: 1)
-        let alerts = app.alerts
-        let expectation = XCTKVOExpectation.init(keyPath: "exists", object: alerts.element, expectedValue: true)
-        let result = XCTWaiter.wait(for: [expectation], timeout: 3.0)
-    }
 }

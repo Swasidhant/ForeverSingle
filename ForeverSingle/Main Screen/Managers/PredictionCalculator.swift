@@ -11,7 +11,7 @@ import Foundation
 class PredictionCalculator {
     func calculatePrediction () -> Float {
         var counter = 0
-        while counter < 10000 {
+        while counter < 1000 {
             print("loop run count = \(counter)")
             counter += 1
         }
